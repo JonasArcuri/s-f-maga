@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Magazine Luiza</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="shortcut icon" href="magalu-logo-898CB9B3B7-seeklogo.com.png" type="image/x-icon">
+</head>
+<body>
+  <!-- Barra superior -->
+  <div class="top-bar">
+    <div class="top-links">
+      <a href="#">Nossas lojas</a>
+      <a href="#">Tenha sua loja</a>
+      <a href="#">Regulamentos</a>
+      <a href="#">Acessibilidade</a>
+      <a href="#">Segurança & Privacidade</a>
+    </div>
+    <div class="top-right">
+      <a href="#">Atendimento</a>
+      <span>Compre pelo tel: 0800 773 3838</span>
+      <a href="#">Meus pedidos</a>
+    </div>
+  </div>
+
+  <!-- Menu principal -->
+  <div class="main-menu">
+    <img src="logo-lu.webp" alt="Magalu boneca" class="avatar">
+
+    <img src="magalu-logo-898CB9B3B7-seeklogo.com.png" alt="Logo Magalu" class="logo">
+
+    <div class="search-bar">
+      <input type="text" placeholder="Busca no Magalu">
+      <i class="fas fa-search"></i>
+    </div>
+
+    <div class="menu-actions">
+      <div class="location">
+        <i class="fas fa-map-marker-alt"></i>
+        <div>
+          <strong>Bem-vindo :)</strong><br>
+          <a href="#">Entre ou cadastre-se</a>
+        </div>
+      </div>
+      <i class="fas fa-heart"></i>
+      <div class="cart">
+        <i class="fas fa-shopping-bag"></i>
+        <span class="cart-count">0</span>
+      </div>
+    </div>
+
+    <!-- Botão para mobile -->
+    <div class="mobile-toggle" id="mobileToggle">
+      <i class="fas fa-bars"></i>
+    </div>
+  </div>
+
+  <!-- Barra de categorias -->
+  <div class="categories" id="categoryMenu">
+    <div class="departments-dropdown">
+      <a href="#" class="departments-toggle"><i class="fas fa-bars"></i> Todos os departamentos <i class="fas fa-chevron-down"></i></a>
+      <div class="departments-menu">
+        <div class="category-item">
+          <a href="#" class="category-title">Eletrônicos <i class="fas fa-chevron-right"></i></a>
+          <div class="subcategory">
+            <a href="#">Smartphones</a>
+            <a href="#">Notebooks</a>
+            <a href="#">Tablets</a>
+            <a href="#">Smart TVs</a>
+            <a href="#">Áudio</a>
+          </div>
+        </div>
+        <div class="category-item">
+          <a href="#" class="category-title">Moda <i class="fas fa-chevron-right"></i></a>
+          <div class="subcategory">
+            <a href="#">Feminina</a>
+            <a href="#">Masculina</a>
+            <a href="#">Infantil</a>
+            <a href="#">Calçados</a>
+            <a href="#">Acessórios</a>
+          </div>
+        </div>
+        <div class="category-item">
+          <a href="#" class="category-title">Casa e Decoração <i class="fas fa-chevron-right"></i></a>
+          <div class="subcategory">
+            <a href="#">Móveis</a>
+            <a href="#">Decoração</a>
+            <a href="#">Cama, Mesa e Banho</a>
+            <a href="#">Cozinha</a>
+            <a href="#">Jardim</a>
+          </div>
+        </div>
+        <div class="category-item">
+          <a href="#" class="category-title">Esporte e Lazer <i class="fas fa-chevron-right"></i></a>
+          <div class="subcategory">
+            <a href="#">Fitness</a>
+            <a href="#">Esportes</a>
+            <a href="#">Suplementos</a>
+            <a href="#">Camping</a>
+            <a href="#">Bicicletas</a>
+          </div>
+        </div>
+        <div class="category-item">
+          <a href="#" class="category-title">Beleza e Perfumaria <i class="fas fa-chevron-right"></i></a>
+          <div class="subcategory">
+            <a href="#">Maquiagem</a>
+            <a href="#">Perfumes</a>
+            <a href="#">Cuidados com a Pele</a>
+            <a href="#">Cabelos</a>
+            <a href="#">Tratamentos</a>
+          </div>
+        </div>
+        <div class="category-item">
+          <a href="#" class="category-title">Brinquedos <i class="fas fa-chevron-right"></i></a>
+          <div class="subcategory">
+            <a href="#">Bonecas</a>
+            <a href="#">Carrinhos</a>
+            <a href="#">Jogos</a>
+            <a href="#">Brinquedos Educativos</a>
+            <a href="#">Bicicletas Infantis</a>
+          </div>
+        </div>
+        <div class="category-item">
+          <a href="#" class="category-title">Livros <i class="fas fa-chevron-right"></i></a>
+          <div class="subcategory">
+            <a href="#">Literatura</a>
+            <a href="#">Didáticos</a>
+            <a href="#">Infantil</a>
+            <a href="#">Técnicos</a>
+            <a href="#">HQs</a>
+          </div>
+        </div>
+        <div class="category-item">
+          <a href="#" class="category-title">Pet Shop <i class="fas fa-chevron-right"></i></a>
+          <div class="subcategory">
+            <a href="#">Cães</a>
+            <a href="#">Gatos</a>
+            <a href="#">Peixes</a>
+            <a href="#">Aves</a>
+            <a href="#">Rações</a>
+          </div>
+        </div>
+        <div class="category-item">
+          <a href="#" class="category-title">Mercado <i class="fas fa-chevron-right"></i></a>
+          <div class="subcategory">
+            <a href="#">Alimentos</a>
+            <a href="#">Bebidas</a>
+            <a href="#">Limpeza</a>
+            <a href="#">Higiene</a>
+            <a href="#">Padaria</a>
+          </div>
+        </div>
+        <div class="category-item">
+          <a href="#" class="category-title">Bebês <i class="fas fa-chevron-right"></i></a>
+          <div class="subcategory">
+            <a href="#">Fraldas</a>
+            <a href="#">Carrinhos</a>
+            <a href="#">Berços</a>
+            <a href="#">Roupas</a>
+            <a href="#">Mamadeiras</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#">Ofertas do Dia</a>
+    <a href="#">Celulares</a>
+    <a href="#">Móveis</a>
+    <a href="#">Eletrodomésticos</a>
+    <a href="#">TV e Vídeo</a>
+    <a href="#">Informática</a>
+    <a href="#">Internacional</a>
+    <a href="#">Baixe o SuperApp</a>
+    <a href="#"><i class="fas fa-credit-card"></i> Cartão Magalu</a>
+  </div>
+
+  <!-- Anúncio PlayStation 5 -->
+  <div class="product-ad">
+    <div class="product-container">
+      <div class="product-gallery">
+        <div class="main-image">
+          <img src="imagens/f04c1e39ac1fe6aedfd4f38fb805e893.webp" alt="PlayStation 5">
+        </div>
+        <div class="thumbnail-images">
+          <img src="imagens/3d51f30526c8d996eaec13049ef5508e.webp" alt="PS5 Vista 1">
+          <img src="imagens/a979e08a4dbca69294f130bd8be99496.webp" alt="PS5 Vista 2">
+          <img src="imagens/c6d5735e39b5675ddcd8debd1072494f.webp" alt="PS5 Vista 3">
+          <img src="imagens/f41f7537952800f11612a924e4c6b06f.webp" alt="PS5 Vista 3">
+        </div>
+      </div>
+      
+      <div class="product-info">
+        <div class="product-header">
+          <div class="rating-share">
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span>4.8 (2166)</span>
+              <a href="#" class="avaliar">Avaliar produto</a>
+            </div>
+            <div class="share-buttons">
+              <button class="share-btn"><i class="fas fa-share-alt"></i></button>
+              <button class="heart-btn"><i class="far fa-heart"></i></button>
+            </div>
+          </div>
+          <div class="seller-info">
+            <p>Vendido por <a href="#" class="seller">BUNKERTECH</a></p>
+            <p>Entregue por <img src="magalu-logo-898CB9B3B7-seeklogo.com.png" alt="Magalu" class="magalu-mini"></p>
+            <p class="guarantee">O Magalu garante a sua compra, do pedido à entrega. <a href="#">Saiba mais</a></p>
+          </div>
+        </div>
+
+        <div class="product-price">
+          <div class="original-price">R$ 4.199,00</div>
+          <div class="card-price">
+            <span class="price">R$ 3.999,99</span>
+            <span class="installments">em 10x de R$ 400,00 sem juros</span>
+          </div>
+          <div class="pix-price">
+            <span class="price-label">ou</span>
+            <span class="price">R$ 3.599,99</span>
+            <span class="pix-label">no Pix</span>
+            <span class="discount">(10% de desconto no pix)</span>
+          </div>
+
+          <div class="coupon">
+            <div class="coupon-tag">
+              <span class="discount-tag">5% OFF</span>
+              <span class="coupon-code">5OFFABRIL</span>
+            </div>
+            <button class="copy-button">
+              <i class="far fa-copy"></i> Copiar
+            </button>
+          </div>
+          <div class="coupon-info">Copie o cupom e cole na revisão. Válido até 30 de abr.</div>
+
+          <div class="payment-options">
+            <div class="credit-card">
+              <span class="method">Cartão de crédito</span>
+              <div class="price-info">
+                <span class="total">R$ 3.999,99</span>
+                <span class="installment">10x R$ 400,00</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="buy-buttons">
+            <button class="buy-now">
+              <i class="fas fa-shopping-cart"></i>
+              COMPRAR AGORA
+            </button>
+            <button class="add-cart">
+              <i class="fas fa-shopping-bag"></i>
+              ADICIONAR À SACOLA
+            </button>
+          </div>
+
+          <div class="shipping-calculator">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Calcular frete e prazo</span>
+          </div>
+        </div>
+
+        <div class="product-features">
+          <h3>Características:</h3>
+          <ul>
+            <li><i class="fas fa-check"></i> Processador AMD Zen 2 de 8 núcleos</li>
+            <li><i class="fas fa-check"></i> 16GB de memória GDDR6</li>
+            <li><i class="fas fa-check"></i> SSD de 825GB</li>
+            <li><i class="fas fa-check"></i> Ray Tracing</li>
+            <li><i class="fas fa-check"></i> Compatível com 4K e 120Hz</li>
+          </ul>
+        </div>
+
+        <div class="product-actions">
+          <button class="buy-button">
+            <i class="fas fa-shopping-cart"></i> Comprar
+          </button>
+          <button class="wishlist-button">
+            <i class="fas fa-heart"></i> Favoritar
+          </button>
+        </div>
+
+        <div class="product-shipping">
+          <div class="shipping-info">
+            <i class="fas fa-truck"></i>
+            <div>
+              <strong>Frete grátis</strong>
+              <span>Para todo o Brasil</span>
+            </div>
+          </div>
+          <div class="delivery-time">
+            <i class="fas fa-clock"></i>
+            <div>
+              <strong>Entrega em até 5 dias úteis</strong>
+              <span>Após confirmação do pagamento</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Seção de produtos sugeridos -->
+  <div class="suggested-products">
+    <h2>Quem viu este produto, também viu</h2>
+    <div class="carousel-container">
+      <button class="carousel-button prev" id="prevBtn">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <div class="carousel-wrapper">
+        <div class="carousel-items">
+          <div class="product-card">
+            <img src="imagens/f04c1e39ac1fe6aedfd4f38fb805e893.webp" alt="PlayStation 5">
+            <div class="product-info-card">
+              <h3>Console PlayStation 5 Slim Sony, SSD 1TB, Edição Digital</h3>
+              <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>5.0 (2166)</span>
+              </div>
+              <div class="product-price-card">
+                <span class="price">R$ 3.999,99</span>
+                <span class="installments">10x de R$ 399,99 sem juros</span>
+                <span class="pix-price">R$ 3.343,12 no Pix</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img src="imagens/3d51f30526c8d996eaec13049ef5508e.webp" alt="PlayStation 5">
+            <div class="product-info-card">
+              <h3>Console PlayStation 5 Slim Sony, SSD 1TB, Com Controle</h3>
+              <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>5.0 (1014)</span>
+              </div>
+              <div class="product-price-card">
+                <span class="price">R$ 4.099,00</span>
+                <span class="installments">10x de R$ 409,90 sem juros</span>
+                <span class="pix-price">R$ 3.607,12 no Pix</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img src="imagens/a979e08a4dbca69294f130bd8be99496.webp" alt="PlayStation 5">
+            <div class="product-info-card">
+              <h3>PlayStation 5 Slim Edição Digital 2024 1TB</h3>
+              <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>5.0 (2164)</span>
+              </div>
+              <div class="product-price-card">
+                <span class="price">R$ 3.699,00</span>
+                <span class="installments">10x de R$ 369,90 sem juros</span>
+                <span class="pix-price">R$ 3.440,07 no Pix</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img src="imagens/c6d5735e39b5675ddcd8debd1072494f.webp" alt="PlayStation 5">
+            <div class="product-info-card">
+              <h3>PlayStation 5 Slim 2024 1TB 1 Controle Branco Sony</h3>
+              <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>5.0 (1012)</span>
+              </div>
+              <div class="product-price-card">
+                <span class="price">R$ 4.299,00</span>
+                <span class="installments">10x de R$ 429,90 sem juros</span>
+                <span class="pix-price">R$ 3.869,10 no Pix</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-button next" id="nextBtn">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Overlay para zoom -->
+  <div class="zoom-overlay">
+    <img src="" alt="Zoom do produto">
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
