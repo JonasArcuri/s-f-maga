@@ -3,10 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:;">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
   <title>Magazine Luiza</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="shortcut icon" href="magalu-logo-898CB9B3B7-seeklogo.com.png" type="image/x-icon">
+  <link rel="shortcut icon" href="imagens/magalu-logo-898CB9B3B7-seeklogo.com.png" type="image/x-icon">
 </head>
 <body>
   <!-- Barra superior -->
@@ -27,152 +30,164 @@
 
   <!-- Menu principal -->
   <div class="main-menu">
-    <img src="logo-lu.webp" alt="Magalu boneca" class="avatar">
+    <div class="menu-container">
+      <img src="imagens/logo-lu.webp" alt="Magalu boneca" class="avatar">
+      <img src="imagens/magalu-logo-898CB9B3B7-seeklogo.com.png" alt="Logo Magalu" class="logo">
 
-    <img src="magalu-logo-898CB9B3B7-seeklogo.com.png" alt="Logo Magalu" class="logo">
+      <div class="search-bar">
+        <input type="text" placeholder="Busca no Magalu">
+        <button type="button" class="search-button">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
 
-    <div class="search-bar">
-      <input type="text" placeholder="Busca no Magalu">
-      <i class="fas fa-search"></i>
-    </div>
-
-    <div class="menu-actions">
-      <div class="location">
-        <i class="fas fa-map-marker-alt"></i>
-        <div>
-          <strong>Bem-vindo :)</strong><br>
-          <a href="#">Entre ou cadastre-se</a>
+      <div class="menu-actions">
+        <div class="location">
+          <i class="fas fa-map-marker-alt"></i>
+          <div class="location-info">
+            <span>Bem-vindo :)</span>
+            <a href="#">Entre ou cadastre-se</a>
+          </div>
+        </div>
+        <div class="favorites">
+          <i class="fas fa-heart"></i>
+        </div>
+        <div class="cart">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="cart-count">0</span>
         </div>
       </div>
-      <i class="fas fa-heart"></i>
-      <div class="cart">
-        <i class="fas fa-shopping-bag"></i>
-        <span class="cart-count">0</span>
-      </div>
-    </div>
-
-    <!-- Botão para mobile -->
-    <div class="mobile-toggle" id="mobileToggle">
-      <i class="fas fa-bars"></i>
     </div>
   </div>
 
   <!-- Barra de categorias -->
   <div class="categories" id="categoryMenu">
-    <div class="departments-dropdown">
-      <a href="#" class="departments-toggle"><i class="fas fa-bars"></i> Todos os departamentos <i class="fas fa-chevron-down"></i></a>
-      <div class="departments-menu">
-        <div class="category-item">
-          <a href="#" class="category-title">Eletrônicos <i class="fas fa-chevron-right"></i></a>
-          <div class="subcategory">
-            <a href="#">Smartphones</a>
-            <a href="#">Notebooks</a>
-            <a href="#">Tablets</a>
-            <a href="#">Smart TVs</a>
-            <a href="#">Áudio</a>
+    <div class="categories-container">
+      <div class="departments-dropdown">
+        <button class="departments-toggle">
+          <i class="fas fa-bars"></i>
+          <span>Todos os departamentos</span>
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="departments-menu">
+          <div class="category-item">
+            <a href="#" class="category-title">Eletrônicos <i class="fas fa-chevron-right"></i></a>
+            <div class="subcategory">
+              <a href="#">Smartphones</a>
+              <a href="#">Notebooks</a>
+              <a href="#">Tablets</a>
+              <a href="#">Smart TVs</a>
+              <a href="#">Áudio</a>
+            </div>
           </div>
-        </div>
-        <div class="category-item">
-          <a href="#" class="category-title">Moda <i class="fas fa-chevron-right"></i></a>
-          <div class="subcategory">
-            <a href="#">Feminina</a>
-            <a href="#">Masculina</a>
-            <a href="#">Infantil</a>
-            <a href="#">Calçados</a>
-            <a href="#">Acessórios</a>
+          <div class="category-item">
+            <a href="#" class="category-title">Moda <i class="fas fa-chevron-right"></i></a>
+            <div class="subcategory">
+              <a href="#">Feminina</a>
+              <a href="#">Masculina</a>
+              <a href="#">Infantil</a>
+              <a href="#">Calçados</a>
+              <a href="#">Acessórios</a>
+            </div>
           </div>
-        </div>
-        <div class="category-item">
-          <a href="#" class="category-title">Casa e Decoração <i class="fas fa-chevron-right"></i></a>
-          <div class="subcategory">
-            <a href="#">Móveis</a>
-            <a href="#">Decoração</a>
-            <a href="#">Cama, Mesa e Banho</a>
-            <a href="#">Cozinha</a>
-            <a href="#">Jardim</a>
+          <div class="category-item">
+            <a href="#" class="category-title">Casa e Decoração <i class="fas fa-chevron-right"></i></a>
+            <div class="subcategory">
+              <a href="#">Móveis</a>
+              <a href="#">Decoração</a>
+              <a href="#">Cama, Mesa e Banho</a>
+              <a href="#">Cozinha</a>
+              <a href="#">Jardim</a>
+            </div>
           </div>
-        </div>
-        <div class="category-item">
-          <a href="#" class="category-title">Esporte e Lazer <i class="fas fa-chevron-right"></i></a>
-          <div class="subcategory">
-            <a href="#">Fitness</a>
-            <a href="#">Esportes</a>
-            <a href="#">Suplementos</a>
-            <a href="#">Camping</a>
-            <a href="#">Bicicletas</a>
+          <div class="category-item">
+            <a href="#" class="category-title">Esporte e Lazer <i class="fas fa-chevron-right"></i></a>
+            <div class="subcategory">
+              <a href="#">Fitness</a>
+              <a href="#">Esportes</a>
+              <a href="#">Suplementos</a>
+              <a href="#">Camping</a>
+              <a href="#">Bicicletas</a>
+            </div>
           </div>
-        </div>
-        <div class="category-item">
-          <a href="#" class="category-title">Beleza e Perfumaria <i class="fas fa-chevron-right"></i></a>
-          <div class="subcategory">
-            <a href="#">Maquiagem</a>
-            <a href="#">Perfumes</a>
-            <a href="#">Cuidados com a Pele</a>
-            <a href="#">Cabelos</a>
-            <a href="#">Tratamentos</a>
+          <div class="category-item">
+            <a href="#" class="category-title">Beleza e Perfumaria <i class="fas fa-chevron-right"></i></a>
+            <div class="subcategory">
+              <a href="#">Maquiagem</a>
+              <a href="#">Perfumes</a>
+              <a href="#">Cuidados com a Pele</a>
+              <a href="#">Cabelos</a>
+              <a href="#">Tratamentos</a>
+            </div>
           </div>
-        </div>
-        <div class="category-item">
-          <a href="#" class="category-title">Brinquedos <i class="fas fa-chevron-right"></i></a>
-          <div class="subcategory">
-            <a href="#">Bonecas</a>
-            <a href="#">Carrinhos</a>
-            <a href="#">Jogos</a>
-            <a href="#">Brinquedos Educativos</a>
-            <a href="#">Bicicletas Infantis</a>
+          <div class="category-item">
+            <a href="#" class="category-title">Brinquedos <i class="fas fa-chevron-right"></i></a>
+            <div class="subcategory">
+              <a href="#">Bonecas</a>
+              <a href="#">Carrinhos</a>
+              <a href="#">Jogos</a>
+              <a href="#">Brinquedos Educativos</a>
+              <a href="#">Bicicletas Infantis</a>
+            </div>
           </div>
-        </div>
-        <div class="category-item">
-          <a href="#" class="category-title">Livros <i class="fas fa-chevron-right"></i></a>
-          <div class="subcategory">
-            <a href="#">Literatura</a>
-            <a href="#">Didáticos</a>
-            <a href="#">Infantil</a>
-            <a href="#">Técnicos</a>
-            <a href="#">HQs</a>
+          <div class="category-item">
+            <a href="#" class="category-title">Livros <i class="fas fa-chevron-right"></i></a>
+            <div class="subcategory">
+              <a href="#">Literatura</a>
+              <a href="#">Didáticos</a>
+              <a href="#">Infantil</a>
+              <a href="#">Técnicos</a>
+              <a href="#">HQs</a>
+            </div>
           </div>
-        </div>
-        <div class="category-item">
-          <a href="#" class="category-title">Pet Shop <i class="fas fa-chevron-right"></i></a>
-          <div class="subcategory">
-            <a href="#">Cães</a>
-            <a href="#">Gatos</a>
-            <a href="#">Peixes</a>
-            <a href="#">Aves</a>
-            <a href="#">Rações</a>
+          <div class="category-item">
+            <a href="#" class="category-title">Pet Shop <i class="fas fa-chevron-right"></i></a>
+            <div class="subcategory">
+              <a href="#">Cães</a>
+              <a href="#">Gatos</a>
+              <a href="#">Peixes</a>
+              <a href="#">Aves</a>
+              <a href="#">Rações</a>
+            </div>
           </div>
-        </div>
-        <div class="category-item">
-          <a href="#" class="category-title">Mercado <i class="fas fa-chevron-right"></i></a>
-          <div class="subcategory">
-            <a href="#">Alimentos</a>
-            <a href="#">Bebidas</a>
-            <a href="#">Limpeza</a>
-            <a href="#">Higiene</a>
-            <a href="#">Padaria</a>
+          <div class="category-item">
+            <a href="#" class="category-title">Mercado <i class="fas fa-chevron-right"></i></a>
+            <div class="subcategory">
+              <a href="#">Alimentos</a>
+              <a href="#">Bebidas</a>
+              <a href="#">Limpeza</a>
+              <a href="#">Higiene</a>
+              <a href="#">Padaria</a>
+            </div>
           </div>
-        </div>
-        <div class="category-item">
-          <a href="#" class="category-title">Bebês <i class="fas fa-chevron-right"></i></a>
-          <div class="subcategory">
-            <a href="#">Fraldas</a>
-            <a href="#">Carrinhos</a>
-            <a href="#">Berços</a>
-            <a href="#">Roupas</a>
-            <a href="#">Mamadeiras</a>
+          <div class="category-item">
+            <a href="#" class="category-title">Bebês <i class="fas fa-chevron-right"></i></a>
+            <div class="subcategory">
+              <a href="#">Fraldas</a>
+              <a href="#">Carrinhos</a>
+              <a href="#">Berços</a>
+              <a href="#">Roupas</a>
+              <a href="#">Mamadeiras</a>
+            </div>
           </div>
         </div>
       </div>
+
+      <nav class="categories-nav">
+        <a href="#" class="category-link">Ofertas do Dia</a>
+        <a href="#" class="category-link">Celulares</a>
+        <a href="#" class="category-link">Móveis</a>
+        <a href="#" class="category-link">Eletrodomésticos</a>
+        <a href="#" class="category-link">TV e Vídeo</a>
+        <a href="#" class="category-link">Informática</a>
+        <a href="#" class="category-link">Internacional</a>
+        <a href="#" class="category-link">Baixe o SuperApp</a>
+        <a href="#" class="category-link card-link">
+          <i class="fas fa-credit-card"></i>
+          Cartão Magalu
+        </a>
+      </nav>
     </div>
-    <a href="#">Ofertas do Dia</a>
-    <a href="#">Celulares</a>
-    <a href="#">Móveis</a>
-    <a href="#">Eletrodomésticos</a>
-    <a href="#">TV e Vídeo</a>
-    <a href="#">Informática</a>
-    <a href="#">Internacional</a>
-    <a href="#">Baixe o SuperApp</a>
-    <a href="#"><i class="fas fa-credit-card"></i> Cartão Magalu</a>
   </div>
 
   <!-- Anúncio PlayStation 5 -->
@@ -209,7 +224,7 @@
           </div>
           <div class="seller-info">
             <p>Vendido por <a href="#" class="seller">BUNKERTECH</a></p>
-            <p>Entregue por <img src="magalu-logo-898CB9B3B7-seeklogo.com.png" alt="Magalu" class="magalu-mini"></p>
+            <p>Entregue por <img src="imagens/magalu-logo-898CB9B3B7-seeklogo.com.png" alt="Magalu" class="magalu-mini"></p>
             <p class="guarantee">O Magalu garante a sua compra, do pedido à entrega. <a href="#">Saiba mais</a></p>
           </div>
         </div>
@@ -263,17 +278,6 @@
             <i class="fas fa-map-marker-alt"></i>
             <span>Calcular frete e prazo</span>
           </div>
-        </div>
-
-        <div class="product-features">
-          <h3>Características:</h3>
-          <ul>
-            <li><i class="fas fa-check"></i> Processador AMD Zen 2 de 8 núcleos</li>
-            <li><i class="fas fa-check"></i> 16GB de memória GDDR6</li>
-            <li><i class="fas fa-check"></i> SSD de 825GB</li>
-            <li><i class="fas fa-check"></i> Ray Tracing</li>
-            <li><i class="fas fa-check"></i> Compatível com 4K e 120Hz</li>
-          </ul>
         </div>
 
         <div class="product-actions">
@@ -401,11 +405,133 @@
     </div>
   </div>
 
+  <!-- Descrição do Produto -->
+  <div class="product-description">
+    <div class="description-container">
+      <h2>Informações do Produto</h2>
+      <h3>Console PlayStation 5 Mídia Digital Slim 1TB com 2 jogos Sony</h3>
+      <p class="subtitle">Console PlayStation 5 Digital SLIM com 2 jogos</p>
+
+      <div class="description-text">
+        <p>Jogue como nunca antes. Console PlayStation®5 Slim Disk com os jogos Returnal e Ratchet & Clank: Em uma outra dimensão. Com um console PS5, os jogadores contam com uma poderosa tecnologia de jogos em um design elegante e compacto. Experimente o carregamento extremamente rápido de um SSD de ultra-alta velocidade, imersão mais profunda com ajuda da resposta tátil, gatilhos adaptáveis e áudio 3D, além de uma geração totalmente nova de jogos PlayStation incríveis.</p>
+
+        <p>Na velocidade da luz Domine o poder de uma CPU e GPU personalizadas e o SSD com E/S integradas que redefinem as regras do que o console PlayStation pode fazer. Jogos impressionantes Maravilhe-se com os gráficos incríveis e experimente os recursos do novo PS5. Imersão de tirar o fôlego Descubra uma experiência de jogos mais profunda compatível com resposta tátil, gatilhos adaptáveis e tecnologia de áudio 3D.</p>
+
+        <p>Design slim Com o PS5 Edição Digital, os jogadores contam com uma poderosa tecnologia de jogos em um design elegante e compacto. 1TB de armazenamento Tenha seus jogos favoritos prontos e esperando para você começar a jogar com 1TB de armazenamento SSD integrado. Compatibilidade com versões anteriores e Game Boost O console PS5® pode rodar mais de 4.000 jogos PS4. Com o recurso Game Boost, você pode até mesmo aproveitar as taxas de quadros mais rápidas e suaves em alguns dos melhores jogos do console PS4.</p>
+
+        <p class="note">*Suporte vertical vendido separadamente.</p>
+        <p class="note">Imagens meramente ilustrativas.</p>
+        <p class="note">Todas as informações divulgadas são de responsabilidade do Fabricante/Fornecedor.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Especificações Técnicas -->
+  <div class="product-specs">
+    <div class="specs-container">
+      <table class="specs-table">
+        <tr>
+          <th>Formato Mídia</th>
+          <td>Mídia digital</td>
+        </tr>
+        <tr>
+          <th>Memoria</th>
+          <td>1 TB</td>
+        </tr>
+        <tr>
+          <th>Fabricante</th>
+          <td>Sony</td>
+        </tr>
+        <tr>
+          <th>Tecnologia</th>
+          <td>HDR</td>
+        </tr>
+        <tr>
+          <th>Qualidade Audio</th>
+          <td>3D</td>
+        </tr>
+        <tr>
+          <th rowspan="11">Informações complementares</th>
+          <td>
+            <div class="info-row">
+              <span class="info-label">Capacidade do Armazenamento</span>
+              <span class="info-value">1TB</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Capacidade do HD</span>
+              <span class="info-value">1 TB</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Formato</span>
+              <span class="info-value">Slim</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Formato do Console</span>
+              <span class="info-value">Slim</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Jogos Inclusos</span>
+              <span class="info-value">Returnal e Ratchet & Clank: Em uma outra dimensão</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Linha</span>
+              <span class="info-value">PlayStation 5</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Marca</span>
+              <span class="info-value">Sony</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Modelo</span>
+              <span class="info-value">PlayStation 5 Digital SLIM</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Tipo de Armazenamento</span>
+              <span class="info-value">SSD</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Áudio</span>
+              <span class="info-value">3D</span>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
   <!-- Overlay para zoom -->
   <div class="zoom-overlay">
     <img src="" alt="Zoom do produto">
   </div>
 
   <script type="module" src="js/main.js"></script>
+  
+  <!-- Scripts de proteção -->
+  <script>
+    // Desabilita o clique direito
+    document.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+    });
+
+    // Desabilita o atalho de teclas para inspeção
+    document.addEventListener('keydown', function(e) {
+      // Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+Shift+C, F12
+      if (
+        (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74 || e.keyCode === 67)) ||
+        (e.keyCode === 123)
+      ) {
+        e.preventDefault();
+      }
+    });
+
+    // Desabilita a seleção de texto
+    document.addEventListener('selectstart', function(e) {
+      e.preventDefault();
+    });
+
+    // Mensagem de aviso no console
+    console.log('%cAtenção!', 'color: red; font-size: 30px; font-weight: bold;');
+    console.log('%cEste site é protegido. Qualquer tentativa de cópia ou manipulação não autorizada é proibida.', 'font-size: 16px;');
+  </script>
 </body>
 </html>
